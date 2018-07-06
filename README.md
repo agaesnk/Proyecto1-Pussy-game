@@ -78,7 +78,7 @@ funciones de transicion.
 
 Especificar las url del proyecto y del deploy
 
-[Link Repositorio](http://github.com)
+[Link Repositorio](https://github.com/agaesnk/Pussy-s-Master/tree/master)
 
 [Link Deploy](http://github.com)
 
