@@ -17,6 +17,7 @@ La aplicación estará programada con DOM manipulation.
 - Se puede captar el aumento de velocidad en el movimiento del cursor.
 - Se puede utilizar la pantalla táctil del móvil para mover el cursor.
 - Se pueden añadir animaciones que hagan temblar o explotar el termómetro. 
+- Crear un formulario básico con el objetivo del usuario (placer propio o ajeno) y añadir mensajes de voz personalizados al objetivo del usuario (tipo Siri).
 
 ##  Estructuras de Datos
 
