@@ -21,7 +21,7 @@ La aplicación estará programada con DOM manipulation.
 ##  Estructuras de Datos
 
 Clase ___main.js__:
-
+\\\javascript.
 var game = new Game([options]);
 game.start();
 
@@ -35,15 +35,17 @@ function buildGameLevel3(){};
 function destroyGameLevel3(){};
 function buildGameOver(){};
 function destroyGameOver(){};
+\\\
 
 Clase __game.js__:
-
+\\\javascript.
 function Game([options]){
     this.termometer = new termometer()
 }
 
 Game.prototype.start = function(){};
 Game.prototype._update = function (){};
+\\\
 
 Clase __termómetro__:
 
