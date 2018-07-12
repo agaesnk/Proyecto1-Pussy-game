@@ -93,10 +93,16 @@ progress{
   width: 250px;
   height: 30px;
   justify-self: center;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 progress::-webkit-progress-value {
-  background-color: #red !important;
+  background: #E91D55;
+}
+
+progress::-webkit-progress-bar {
+  background: #eee;
 }
 
 .container{
