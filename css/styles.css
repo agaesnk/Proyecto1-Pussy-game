@@ -25,13 +25,13 @@ footer {
   padding: 10px auto;
 }
 
-.container {
+/* .container {
   display:flex;
   justify-content: space-between;
   align-content: center;
   width: 100%;
   max-width:960px;
-}
+} */
 
 .termometro{
   height: 100%;
@@ -51,4 +51,551 @@ footer {
 .vagina{
   height: 100%;
   width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+div{
+  border:1px solid red;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin:0;
+  padding: 0;
+}
+
+.termometer{
+  width: 320px;
+  height: 110px;
+  margin: 0 auto;
+  display:flex;
+}
+
+.temperature{
+  width: 250px;
+  height: 30px;
+  margin: auto;
+  justify-self: center;
+}
+
+progress{
+  width: 250px;
+  height: 30px;
+  justify-self: center;
+}
+
+progress::-webkit-progress-value {
+  background-color: #red !important;
+}
+
+.container{
+  width: 280px;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 514px;
+  background-image: url(../images/vaginafinal.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.rowA{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowA1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowA9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowA10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowB{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowB1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowB9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowB10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowC{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowC1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowC9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowC10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowD{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowD1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowD9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowD10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowE{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowE1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowE9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowE10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowF{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowF1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowF9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowF10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowG{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowG1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowG9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowG10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowH{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowH1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowH9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowH10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowI{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowI1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowI9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowI10{
+  width: 10%;
+  background-color: transparent;
+}
+
+.rowJ{
+  width: 100%;
+  height: 10%;
+  display:flex;
+  background-color: transparent;
+}
+
+#rowJ1{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ2{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ3{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ4{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ5{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ6{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ7{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ8{
+  width: 10%;
+  background-color: transparent;
+}
+#rowJ9{
+  width: 10%;
+  background-color: transparent;
+}
+
+#rowJ10{
+  width: 10%;
+  background-color: transparent;
 }

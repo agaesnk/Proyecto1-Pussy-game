@@ -26,47 +26,71 @@ function createSplash (){
 
   
   
-  startBtn.addEventListener ('click', handleClick);
+  startBtn.addEventListener('click', handleClickButtonStart);
   document.body.prepend(splashScreen);
 }
 
-function handleClick(){
+function handleClickButtonStart(){
+  removeSplashScreen();
+  createGameScreenLevel1();
+}
+
+function removeSplashScreen() {
   var splashScreen = document.querySelector("section")
   document.body.removeChild(splashScreen);
-  createGameScreenLevel1()
 }
 
 //Creo pantalla game Level 1
 
 function createGameScreenLevel1 (){
-  var gameScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var container = document.createElement ('div'); 
-  container.classList.add('container');
-  var termometro = document.createElement ('div'); 
-  termometro.classList.add('termometro');
-  var secondaryObject = document.createElement('img'); 
-  secondaryObject.classList.add('temperatura');
-  var vulva = document.createElement('div'); 
-  vulva.classList.add('vulva');
-  var mainObject = document.createElement ('img'); 
-  mainObject.classList.add('vagina');
-  var skipBtn = document.createElement ('button');
 
-  gameScreen.appendChild(title);
-  gameScreen.appendChild(container);
-  container.appendChild(termometro);
-  termometro.appendChild(secondaryObject);
-  container.appendChild(vulva);
-  vulva.appendChild(mainObject);
-  gameScreen.appendChild(skipBtn);
+  var level1 = document.getElementById('level1');
+  level1.removeAttribute('class');
 
-  title.textContent = "Level 1";
-  mainObject.src = "./images/vagina4.png";
-  skipBtn.textContent = "SKIP";
+  var elementsToIncrease = document.getElementsByClassName('increase');
 
-  skipBtn.addEventListener ('click', middleHandleClick1);
-  document.body.prepend(gameScreen)
+  for (var i = 0; i < elementsToIncrease.length; i++){
+    elementsToIncrease[i].addEventListener('mouseover', addTemp);
+  }
+
+  const progress = document.querySelector('progress');
+
+  function addTemp() {
+    progress.value++;
+  }
+
+  function decreaseTemp() {
+    progress.value--;
+  }
+
+  // var gameScreen = document.createElement('section');
+  // var title = document.createElement('h1');
+  // var container = document.createElement ('div'); 
+  // container.classList.add('container');
+  // var termometro = document.createElement ('div'); 
+  // termometro.classList.add('termometro');
+  // var secondaryObject = document.createElement('img'); 
+  // secondaryObject.classList.add('temperatura');
+  // var vulva = document.createElement('div'); 
+  // vulva.classList.add('vulva');
+  // var mainObject = document.createElement ('img'); 
+  // mainObject.classList.add('vagina');
+  // var skipBtn = document.createElement ('button');
+
+  // gameScreen.appendChild(title);
+  // gameScreen.appendChild(container);
+  // container.appendChild(termometro);
+  // termometro.appendChild(secondaryObject);
+  // container.appendChild(vulva);
+  // vulva.appendChild(mainObject);
+  // gameScreen.appendChild(skipBtn);
+
+  // title.textContent = "Level 1";
+  // mainObject.src = "./images/vagina4.png";
+  // skipBtn.textContent = "SKIP";
+
+  // skipBtn.addEventListener ('click', middleHandleClick1);
+  // document.body.prepend(gameScreen)
 }
 
 function middleHandleClick1(){
