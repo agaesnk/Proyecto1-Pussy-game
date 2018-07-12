@@ -1,232 +1,224 @@
 //Creo pantalla inicial
 
 document.body.onload = function(){
-  console.log("hola");
   createSplash();
+  var progress = undefined
+  var MAX_SEXAPPEAL = 25;
+  var sexAppeal = 0;
+  var level = 0;
+  function addTemp() {
+    console.log('addTemp', sexAppeal);
+    sexAppeal++;
+    progress.value = sexAppeal;
+    checkSexappeal();
+  }
+
+  function decreaseTemp() {
+    console.log('decdTemp', sexAppeal);
+    sexAppeal--;
+    progress.value = sexAppeal;
+    checkSexappeal();
+  }
+
+  function hideLevel(levelNumber) {
+    var levelToHide = document.getElementById(`level${levelNumber}`)
+    levelToHide.classList.add("hide");
+  }
+
+  function getProgress () {
+    progress = document.getElementById(`progress${level}`);
+  }
+
+  function resetSexAppeal () {
+    sexAppeal = 0;
+    progress.value = sexAppeal;
+  }
+
+  function checkSexappeal () {
+    if (sexAppeal >= MAX_SEXAPPEAL){
+      switch (level) {
+        case 1:
+          hideLevel(1)
+          createGameScreenLevel2()
+          break;
+        case 2:
+          hideLevel(2)
+          createGameScreenLevel3()
+          break;
+        case 3:
+          hideLevel(3)
+          
+          createWinnerScreen()
+          break;
+        default:
+          break;
+      }
+    }
+  }
+
+  function createSplash (){
+    var splashScreen = document.createElement('section');
+    var title = document.createElement('h1');
+    var subtitle = document.createElement ('h2');
+    var intro = document.createTextNode ('p');
+    var footer = document.createElement ('footer');
+    var startBtn = document.createElement('button');
+
+    splashScreen.appendChild(title);
+    splashScreen.appendChild(subtitle);
+    splashScreen.appendChild(intro);
+    splashScreen.appendChild(footer);
+    footer.appendChild(startBtn);
+
+    title.textContent = "Pussy's Master";
+    subtitle.textContent = "The Game";
+    intro.textContent = 'Un texto de introducción que pensaré más tarde';
+    startBtn.textContent = "START";
+
+
+
+    startBtn.addEventListener('click', handleClickButtonStart);
+    document.body.prepend(splashScreen);
+  }
+
+  function handleClickButtonStart(){
+    removeSplashScreen();
+    createGameScreenLevel1();
+  }
+
+  function removeSplashScreen() {
+    var splashScreen = document.querySelector("section")
+    document.body.removeChild(splashScreen);
+  }
+
+  //Creo pantalla game Level 1
+
+  function createGameScreenLevel1 (){
+    level = 1;
+    var level1 = document.getElementById('level1');
+    level1.removeAttribute('class');
+    getProgress();
+    resetSexAppeal();
+
+    var elementsToIncrease = document.getElementsByClassName('increase');
+
+    for (var i = 0; i < elementsToIncrease.length; i++){
+      elementsToIncrease[i].addEventListener('mouseover', addTemp);
+    }
+
+    var elementsToDecrease = document.getElementsByClassName('decrease');
+
+    for (var i = 0; i < elementsToDecrease.length; i++){
+      elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+    }  
+
+    const progress = document.querySelector('progress');
+  }
+
+  //Creo pantalla game Level 2
+
+  function createGameScreenLevel2 (){
+    level = 2;
+    var level2 = document.getElementById('level2');
+    level2.removeAttribute('class');
+    getProgress();
+    resetSexAppeal();
+
+    var elementsToIncrease = document.getElementsByClassName('increase');
+
+    for (var i = 0; i < elementsToIncrease.length; i++){
+      elementsToIncrease[i].addEventListener('mouseover', addTemp);
+    }
+
+    var elementsToDecrease = document.getElementsByClassName('decrease');
+
+    for (var i = 0; i < elementsToDecrease.length; i++){
+      elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+    }  
+  }
+
+  //Creo pantalla game Level 3
+
+  function createGameScreenLevel3 (){
+    level = 3;
+    var level3 = document.getElementById('level3');
+    level3.removeAttribute('class');
+    getProgress();
+    resetSexAppeal();
+
+    var elementsToIncrease = document.getElementsByClassName('increase');
+
+    for (var i = 0; i < elementsToIncrease.length; i++){
+      elementsToIncrease[i].addEventListener('mouseover', addTemp);
+    }
+
+    var elementsToDecrease = document.getElementsByClassName('decrease');
+
+    for (var i = 0; i < elementsToDecrease.length; i++){
+      elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+    }  
+  }
+
+  // function middleHandleClick3(){
+  //   var gameScreen = document.querySelector("section")
+  //   document.body.removeChild(gameScreen);
+  //   createGameOverScreen();
+  // }
+
+  //Creo pantalla Game Over
+
+  function createGameOverScreen (){
+    var gameOverScreen = document.createElement('section');
+    var title = document.createElement('h1');
+    var message = document.createElement ('p');
+    var restartBtn = document.createElement('button');
+
+    gameOverScreen.appendChild (title);
+    gameOverScreen.appendChild (message);
+    gameOverScreen.appendChild (restartBtn);
+
+
+    title.textContent = "Game Over";
+    message.textContent = "Un mensaje que pensaré más tarde";
+    restartBtn.textContent = "RESTART";
+
+
+    restartBtn.addEventListener ('click', finalHandleClick);
+    document.body.prepend(gameOverScreen);
+  }
+
+  function finalHandleClick(){
+    var gameOverScreen = document.querySelector("section")
+    document.body.removeChild(gameOverScreen);
+    createSplash();
+  }
+
+
+  //Creo pantalla Winner
+
+  function createWinnerScreen (){
+    var gameWinnerScreen = document.createElement('section');
+    var title = document.createElement('h1');
+    var message = document.createElement ('p');
+    var restartBtn = document.createElement('button');
+
+    gameWinnerScreen.appendChild (title);
+    gameWinnerScreen.appendChild (message);
+    gameWinnerScreen.appendChild (restartBtn);
+
+
+    title.textContent = "You are a Master";
+    message.textContent = "Un mensaje que pensaré más tarde";
+    restartBtn.textContent = "RESTART";
+
+
+    restartBtn.addEventListener ('click', finalHandleClick2);
+    document.body.prepend(gameWinnerScreen);
+  }
+
+  function finalHandleClick2(){
+    var gameWinnerScreen = document.querySelector("section")
+    document.body.removeChild(gameWinnerScreen);
+    createSplash();
+  }
 };
-
-function createSplash (){
-  var splashScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var subtitle = document.createElement ('h2');
-  var intro = document.createTextNode ('p');
-  var footer = document.createElement ('footer');
-  var startBtn = document.createElement('button');
-
-  splashScreen.appendChild(title);
-  splashScreen.appendChild(subtitle);
-  splashScreen.appendChild(intro);
-  splashScreen.appendChild(footer);
-  footer.appendChild(startBtn);
-
-  title.textContent = "Pussy's Master";
-  subtitle.textContent = "The Game";
-  intro.textContent = 'Un texto de introducción que pensaré más tarde';
-  startBtn.textContent = "START";
-
-  
-  
-  startBtn.addEventListener('click', handleClickButtonStart);
-  document.body.prepend(splashScreen);
-}
-
-function handleClickButtonStart(){
-  removeSplashScreen();
-  createGameScreenLevel1();
-}
-
-function removeSplashScreen() {
-  var splashScreen = document.querySelector("section")
-  document.body.removeChild(splashScreen);
-}
-
-//Creo pantalla game Level 1
-
-function createGameScreenLevel1 (){
-
-  var level1 = document.getElementById('level1');
-  level1.removeAttribute('class');
-
-  var elementsToIncrease = document.getElementsByClassName('increase');
-
-  for (var i = 0; i < elementsToIncrease.length; i++){
-    elementsToIncrease[i].addEventListener('mouseover', addTemp);
-  }
-
-  var elementsToDecrease = document.getElementsByClassName('decrease');
-
-  for (var i = 0; i < elementsToDecrease.length; i++){
-    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
-  }  
-
-  const progress = document.querySelector('progress');
-
-  function addTemp() {
-    progress.value++;
-  }
-
-  function decreaseTemp() {
-    progress.value--;
-  }
-
-  // var gameScreen = document.createElement('section');
-  // var skipBtn = document.createElement ('button');
-  // gameScreen.appendChild(skipBtn);
-
-  // skipBtn.textContent = "SKIP";
-
-  // skipBtn.addEventListener ('click', middleHandleClick1);
-  // document.body.prepend(gameScreen)
-}
-
-function middleHandleClick1(){
-  var gameScreen = document.querySelector("section")
-  document.body.removeChild(gameScreen);
-  createGameScreenLevel2();
-}
-
-//Creo pantalla game Level 2
-
-function createGameScreenLevel2 (){
-  var level2 = document.getElementById('level2');
-  level1.removeAttribute('class');
-
-  var elementsToIncrease = document.getElementsByClassName('increase');
-
-  for (var i = 0; i < elementsToIncrease.length; i++){
-    elementsToIncrease[i].addEventListener('mouseover', addTemp);
-  }
-
-  var elementsToDecrease = document.getElementsByClassName('decrease');
-
-  for (var i = 0; i < elementsToDecrease.length; i++){
-    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
-  }  
-
-  const progress = document.querySelector('progress');
-
-  function addTemp() {
-    progress.value++;
-  }
-
-  function decreaseTemp() {
-    progress.value--;
-  }
-
-  // var gameScreen = document.createElement('section');
-  // var skipBtn = document.createElement ('button');
-  // gameScreen.appendChild(skipBtn);
-
-  // skipBtn.textContent = "SKIP";
-
-  // skipBtn.addEventListener ('click', middleHandleClick1);
-  // document.body.prepend(gameScreen)
-}
-
-//function middleHandleClick1(){
- // var gameScreen = document.querySelector("section")
- // document.body.removeChild(gameScreen);
- // createGameScreenLevel2();
-//}
- 
-
-
-//Creo pantalla game Level 3
-
-function createGameScreenLevel3 (){
-  var level3 = document.getElementById('level3');
-  level1.removeAttribute('class');
-
-  var elementsToIncrease = document.getElementsByClassName('increase');
-
-  for (var i = 0; i < elementsToIncrease.length; i++){
-    elementsToIncrease[i].addEventListener('mouseover', addTemp);
-  }
-
-  var elementsToDecrease = document.getElementsByClassName('decrease');
-
-  for (var i = 0; i < elementsToDecrease.length; i++){
-    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
-  }  
-
-  const progress = document.querySelector('progress');
-
-  function addTemp() {
-    progress.value++;
-  }
-
-  function decreaseTemp() {
-    progress.value--;
-  }
-
-//function createGameScreenLevel3 (){
-  //var gameScreen = document.createElement('section');
-//var skipBtn = document.createElement ('button');
-//gameScreen.appendChild(skipBtn);
-//skipBtn.textContent = "SKIP";
-//skipBtn.addEventListener ('click', middleHandleClick3);
-  //document.body.prepend(gameScreen)
-}
-
-function middleHandleClick3(){
-  var gameScreen = document.querySelector("section")
-  document.body.removeChild(gameScreen);
-  createGameOverScreen();
-}
-
-//Creo pantalla Game Over
-
-function createGameOverScreen (){
-  var gameOverScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var message = document.createElement ('p');
-  var restartBtn = document.createElement('button');
-
-  gameOverScreen.appendChild (title);
-  gameOverScreen.appendChild (message);
-  gameOverScreen.appendChild (restartBtn);
-
-
-  title.textContent = "Game Over";
-  message.textContent = "Un mensaje que pensaré más tarde";
-  restartBtn.textContent = "RESTART";
-  
-
-  restartBtn.addEventListener ('click', finalHandleClick);
-  document.body.prepend(gameOverScreen);
-}
-
-function finalHandleClick(){
-  var gameOverScreen = document.querySelector("section")
-  document.body.removeChild(gameOverScreen);
-  createSplash();
-}
-
-
-//Creo pantalla Winner
-
-function createWinnerScreen (){
-  var gameWinnerScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var message = document.createElement ('p');
-  var restartBtn = document.createElement('button');
-
-  gameWinnerScreen.appendChild (title);
-  gameWinnerScreen.appendChild (message);
-  gameWinnerScreen.appendChild (restartBtn);
-
-
-  title.textContent = "You are a Master";
-  message.textContent = "Un mensaje que pensaré más tarde";
-  restartBtn.textContent = "RESTART";
-  
-
-  restartBtn.addEventListener ('click', finalHandleClick2);
-  document.body.prepend(gameWinnerScreen);
-}
-
-function finalHandleClick2(){
-  var gameWinnerScreen = document.querySelector("section")
-  document.body.removeChild(gameWinnerScreen);
-  createSplash();
-}
