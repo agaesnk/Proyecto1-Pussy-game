@@ -4,18 +4,24 @@ document.body.onload = function(){
   createSplash();
   var progress = undefined
   var MAX_SEXAPPEAL = 25;
-  var sexAppeal = 0;
+  var sexAppeal = 3;
   var level = 0;
   function addTemp() {
     console.log('addTemp', sexAppeal);
-    sexAppeal++;
+    if (sexAppeal < 25) {
+      sexAppeal++;
+    }
     progress.value = sexAppeal;
     checkSexappeal();
   }
 
+
+
   function decreaseTemp() {
     console.log('decdTemp', sexAppeal);
-    sexAppeal--;
+    if (sexAppeal > 0) {
+      sexAppeal--;
+    }
     progress.value = sexAppeal;
     checkSexappeal();
   }
@@ -30,7 +36,7 @@ document.body.onload = function(){
   }
 
   function resetSexAppeal () {
-    sexAppeal = 0;
+    sexAppeal = 3;
     progress.value = sexAppeal;
   }
 
@@ -38,21 +44,24 @@ document.body.onload = function(){
     if (sexAppeal >= MAX_SEXAPPEAL){
       switch (level) {
         case 1:
-          hideLevel(1)
+          hideLevel(level)
           createGameScreenLevel2()
           break;
         case 2:
-          hideLevel(2)
+          hideLevel(level)
           createGameScreenLevel3()
           break;
         case 3:
-          hideLevel(3)
-          
+          hideLevel(level)
           createWinnerScreen()
           break;
         default:
           break;
       }
+    }
+    if (sexAppeal <= 0) {
+      hideLevel(level);
+      createGameOverScreen();
     }
   }
 
