@@ -22,7 +22,7 @@ footer {
   display:flex;
   justify-content:center;
   width: 100%;
-  padding; 10px auto;
+  padding: 10px auto;
 }
 
 .container {
@@ -34,12 +34,17 @@ footer {
 }
 
 .termometro{
-  height: 350px;
+  height: 100%;
   width: 30%;
 }
 
+.temperatura{
+  height: 80%;
+  width: 100%;
+}
+
 .vulva {
-  height: 350px;
+  height: 80%;
   width: 70%;  
 }
 
