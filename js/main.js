@@ -53,6 +53,12 @@ function createGameScreenLevel1 (){
     elementsToIncrease[i].addEventListener('mouseover', addTemp);
   }
 
+  var elementsToDecrease = document.getElementsByClassName('decrease');
+
+  for (var i = 0; i < elementsToDecrease.length; i++){
+    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+  }  
+
   const progress = document.querySelector('progress');
 
   function addTemp() {
@@ -64,29 +70,9 @@ function createGameScreenLevel1 (){
   }
 
   // var gameScreen = document.createElement('section');
-  // var title = document.createElement('h1');
-  // var container = document.createElement ('div'); 
-  // container.classList.add('container');
-  // var termometro = document.createElement ('div'); 
-  // termometro.classList.add('termometro');
-  // var secondaryObject = document.createElement('img'); 
-  // secondaryObject.classList.add('temperatura');
-  // var vulva = document.createElement('div'); 
-  // vulva.classList.add('vulva');
-  // var mainObject = document.createElement ('img'); 
-  // mainObject.classList.add('vagina');
   // var skipBtn = document.createElement ('button');
-
-  // gameScreen.appendChild(title);
-  // gameScreen.appendChild(container);
-  // container.appendChild(termometro);
-  // termometro.appendChild(secondaryObject);
-  // container.appendChild(vulva);
-  // vulva.appendChild(mainObject);
   // gameScreen.appendChild(skipBtn);
 
-  // title.textContent = "Level 1";
-  // mainObject.src = "./images/vagina4.png";
   // skipBtn.textContent = "SKIP";
 
   // skipBtn.addEventListener ('click', middleHandleClick1);
@@ -102,74 +88,84 @@ function middleHandleClick1(){
 //Creo pantalla game Level 2
 
 function createGameScreenLevel2 (){
-  var gameScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var container = document.createElement ('div'); 
-  container.classList.add('container');
-  var termometro = document.createElement ('div'); 
-  termometro.classList.add('termometro');
-  var secondaryObject = document.createElement('img'); 
-  secondaryObject.classList.add('temperatura');
-  var vulva = document.createElement('div'); 
-  vulva.classList.add('vulva');
-  var mainObject = document.createElement ('img'); 
-  mainObject.classList.add('vagina');
-  var skipBtn = document.createElement ('button');
+  var level2 = document.getElementById('level2');
+  level1.removeAttribute('class');
 
+  var elementsToIncrease = document.getElementsByClassName('increase');
 
-  gameScreen.appendChild(title);
-  gameScreen.appendChild(container);
-  container.appendChild(termometro);
-  termometro.appendChild(secondaryObject);
-  container.appendChild(vulva);
-  vulva.appendChild(mainObject);
-  gameScreen.appendChild(skipBtn);
+  for (var i = 0; i < elementsToIncrease.length; i++){
+    elementsToIncrease[i].addEventListener('mouseover', addTemp);
+  }
 
-  title.textContent = "Level 2";
-  mainObject.src = "./images/vagina4.png";
-  skipBtn.textContent = "SKIP";
+  var elementsToDecrease = document.getElementsByClassName('decrease');
 
-  skipBtn.addEventListener ('click', middleHandleClick2);
-  document.body.prepend(gameScreen)
+  for (var i = 0; i < elementsToDecrease.length; i++){
+    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+  }  
+
+  const progress = document.querySelector('progress');
+
+  function addTemp() {
+    progress.value++;
+  }
+
+  function decreaseTemp() {
+    progress.value--;
+  }
+
+  // var gameScreen = document.createElement('section');
+  // var skipBtn = document.createElement ('button');
+  // gameScreen.appendChild(skipBtn);
+
+  // skipBtn.textContent = "SKIP";
+
+  // skipBtn.addEventListener ('click', middleHandleClick1);
+  // document.body.prepend(gameScreen)
 }
 
-function middleHandleClick2(){
-  var gameScreen = document.querySelector("section")
-  document.body.removeChild(gameScreen);
-  createGameScreenLevel3();
-}
+//function middleHandleClick1(){
+ // var gameScreen = document.querySelector("section")
+ // document.body.removeChild(gameScreen);
+ // createGameScreenLevel2();
+//}
+ 
+
 
 //Creo pantalla game Level 3
 
 function createGameScreenLevel3 (){
-  var gameScreen = document.createElement('section');
-  var title = document.createElement('h1');
-  var container = document.createElement ('div'); 
-  container.classList.add('container');
-  var termometro = document.createElement ('div'); 
-  termometro.classList.add('termometro');
-  var secondaryObject = document.createElement('img'); 
-  secondaryObject.classList.add('temperatura');
-  var vulva = document.createElement('div'); 
-  vulva.classList.add('vulva');
-  var mainObject = document.createElement ('img'); 
-  mainObject.classList.add('vagina');
-  var skipBtn = document.createElement ('button');
+  var level3 = document.getElementById('level3');
+  level1.removeAttribute('class');
 
-  gameScreen.appendChild(title);
-  gameScreen.appendChild(container);
-  container.appendChild(termometro);
-  termometro.appendChild(secondaryObject);
-  container.appendChild(vulva);
-  vulva.appendChild(mainObject);
-  gameScreen.appendChild(skipBtn);
+  var elementsToIncrease = document.getElementsByClassName('increase');
 
-  title.textContent = "Level 3";
-  mainObject.src = "./images/vagina4.png";
-  skipBtn.textContent = "SKIP";
+  for (var i = 0; i < elementsToIncrease.length; i++){
+    elementsToIncrease[i].addEventListener('mouseover', addTemp);
+  }
 
-  skipBtn.addEventListener ('click', middleHandleClick3);
-  document.body.prepend(gameScreen)
+  var elementsToDecrease = document.getElementsByClassName('decrease');
+
+  for (var i = 0; i < elementsToDecrease.length; i++){
+    elementsToDecrease[i].addEventListener('mouseover', decreaseTemp);
+  }  
+
+  const progress = document.querySelector('progress');
+
+  function addTemp() {
+    progress.value++;
+  }
+
+  function decreaseTemp() {
+    progress.value--;
+  }
+
+//function createGameScreenLevel3 (){
+  //var gameScreen = document.createElement('section');
+//var skipBtn = document.createElement ('button');
+//gameScreen.appendChild(skipBtn);
+//skipBtn.textContent = "SKIP";
+//skipBtn.addEventListener ('click', middleHandleClick3);
+  //document.body.prepend(gameScreen)
 }
 
 function middleHandleClick3(){
