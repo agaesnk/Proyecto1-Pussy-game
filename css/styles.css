@@ -40,6 +40,14 @@ button{
   margin: 20px auto;
 }
 
+.restartBtn{
+  justify-content: center;
+  height: 40px;
+  width: 30%;
+  min-width: 150px;
+  margin: 50px auto;
+}
+
 @font-face {
 	font-family:'frozen'; 
 	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Ice%20kingdom%20-%20Bold%20-%20Por%20Kustren.woff');
@@ -93,7 +101,7 @@ button{
 }
 
 .contain{
-  background-color: #282d32;
+  background-color: #ffc792;
 }
 
 footer {
@@ -109,13 +117,22 @@ footer {
 }
 
 #level1 {
-  background-color: #FFFFFF;
+  background-color: #ffc792;
 }
+
+#level2 {
+  background-color: #ffc792;
+}
+
+#level3 {
+  background-color: #ffc792;
+}
+
 
 .titlestyle{ 
   font-size: 50px;
   color: #FFFFFF;
-  margin:70px auto 100px auto;
+  margin:70px auto 40px auto;
 } 
 
 .maintitle{
@@ -125,6 +142,10 @@ footer {
   font-size: 50px;
   color: #FFFFFF;
   margin:20px auto 100px auto;
+}
+
+.skinback{
+  background-color: #ffc792;
 }
 
 /* div{

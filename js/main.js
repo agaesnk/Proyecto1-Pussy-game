@@ -113,6 +113,7 @@ document.body.onload = function(){
   function createGameScreenLevel1 (){
     level = 1;
     var level1 = document.getElementById('level1');
+    document.body.className = "skinback"
     level1.removeAttribute('class');
     getProgress();
     resetSexAppeal();
