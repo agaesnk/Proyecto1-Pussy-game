@@ -34,8 +34,9 @@ h1,h2,p{
 
 button{
   justify-content: center;
-  width: 20%;
-  min-width: 100px;
+  height: 40px;
+  width: 30%;
+  min-width: 150px;
   margin: 20px auto;
 }
 
@@ -86,7 +87,9 @@ button{
 }
 
 .hot{
-  margin: 20px auto;
+  margin: 20px auto 30px auto;
+  height: 800px;
+  width: 300px;
 }
 
 .contain{
@@ -109,13 +112,19 @@ footer {
   background-color: #FFFFFF;
 }
 
-.titlestyle{
-  font-size: 95px;
+.titlestyle{ 
+  font-size: 50px;
   color: #FFFFFF;
+  margin:70px auto 100px auto;
+} 
+
+.maintitle{
+  margin:150px auto 0 auto;
 }
 .substyle{
-  font-size: 80px;
+  font-size: 50px;
   color: #FFFFFF;
+  margin:20px auto 100px auto;
 }
 
 /* div{

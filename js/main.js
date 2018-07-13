@@ -68,20 +68,23 @@ document.body.onload = function(){
   function createSplash (){
     document.body.className = "contain";
     var splashScreen = document.createElement('section');
-    var title = document.createElement('h1');
+    //var title = document.createElement('h1');
+    var maintitle = document.createElement('img');
     var subtitle = document.createElement ('h2');
     //var intro = document.createTextNode ('p');
     var footer = document.createElement ('footer');
     var startBtn = document.createElement('button');
 
-    splashScreen.appendChild(title);
+    splashScreen.appendChild(maintitle);
     splashScreen.appendChild(subtitle);
     //splashScreen.appendChild(intro);
     splashScreen.appendChild(footer);
     footer.appendChild(startBtn);
 
-    title.textContent = "Pussy's Master";
-    title.className = "titlestyle";
+    //title.textContent = "Pussy's Master";
+    //title.className = "titlestyle";
+    maintitle.className = "maintitle";
+    maintitle.src = "./images/cooltext292825311319909.png"
     subtitle.textContent = "THE GAME";
     subtitle.className = "substyle";
     //intro.textContent = 'Un texto de introducción que pensaré más tarde';
@@ -224,7 +227,8 @@ document.body.onload = function(){
 
     document.body.className = "contain";
     title.textContent = "You are a Master!";
-    hot.src = "./images/cooltext292809837500936.png";
+    title.className = "titlestyle";
+    hot.src = "./images/cooltext292827511854661.gif";
     restartBtn.textContent = "RESTART";
     restartBtn.className = "restartBtn";
 
