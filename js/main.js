@@ -66,23 +66,27 @@ document.body.onload = function(){
   }
 
   function createSplash (){
+    document.body.className = "contain";
     var splashScreen = document.createElement('section');
     var title = document.createElement('h1');
     var subtitle = document.createElement ('h2');
-    var intro = document.createTextNode ('p');
+    //var intro = document.createTextNode ('p');
     var footer = document.createElement ('footer');
     var startBtn = document.createElement('button');
 
     splashScreen.appendChild(title);
     splashScreen.appendChild(subtitle);
-    splashScreen.appendChild(intro);
+    //splashScreen.appendChild(intro);
     splashScreen.appendChild(footer);
     footer.appendChild(startBtn);
 
     title.textContent = "Pussy's Master";
-    subtitle.textContent = "The Game";
-    intro.textContent = 'Un texto de introducción que pensaré más tarde';
+    title.className = "titlestyle";
+    subtitle.textContent = "THE GAME";
+    subtitle.className = "substyle";
+    //intro.textContent = 'Un texto de introducción que pensaré más tarde';
     startBtn.textContent = "START";
+    startBtn.className = "start";
 
 
 
@@ -92,6 +96,7 @@ document.body.onload = function(){
 
   function handleClickButtonStart(){
     removeSplashScreen();
+    document.body.removeAttribute("class");
     createGameScreenLevel1();
   }
 
@@ -181,15 +186,16 @@ document.body.onload = function(){
     var title = document.createElement('h1');
     var message = document.createElement ('p');
     var restartBtn = document.createElement('button');
-
+    
     gameOverScreen.appendChild (title);
     gameOverScreen.appendChild (message);
-    gameOverScreen.appendChild (restartBtn);
+    gameOverScreen.appendChild(restartBtn);
 
-
-    title.textContent = "Game Over";
-    message.textContent = "Un mensaje que pensaré más tarde";
-    restartBtn.textContent = "RESTART";
+  
+    title.textContent = "GAME OVER";
+    message.innerHTML = "You<br/> have frozen<br/> me...";
+    message.className = "frozen";
+    restartBtn.textContent = "TRY AGAIN!";
 
 
     restartBtn.addEventListener ('click', finalHandleClick);
@@ -208,17 +214,19 @@ document.body.onload = function(){
   function createWinnerScreen (){
     var gameWinnerScreen = document.createElement('section');
     var title = document.createElement('h1');
-    var message = document.createElement ('p');
+    var hot = document.createElement ('img');
     var restartBtn = document.createElement('button');
 
     gameWinnerScreen.appendChild (title);
-    gameWinnerScreen.appendChild (message);
+    gameWinnerScreen.appendChild (hot);
     gameWinnerScreen.appendChild (restartBtn);
 
 
-    title.textContent = "You are a Master";
-    message.textContent = "Un mensaje que pensaré más tarde";
+    document.body.className = "contain";
+    title.textContent = "You are a Master!";
+    hot.src = "./images/cooltext292809837500936.png";
     restartBtn.textContent = "RESTART";
+    restartBtn.className = "restartBtn";
 
 
     restartBtn.addEventListener ('click', finalHandleClick2);
